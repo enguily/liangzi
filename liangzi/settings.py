@@ -86,22 +86,22 @@ CACHES = {
 }
 
 # 数据库配置
-# DATABASES = {
-    # "default": {
-        # "ENGINE": "django.db.backends.postgresql",
-        # "ATOMIC_REQUESTS": True,  # 强化事务一致性
-        # "OPTIONS": {
-            # "isolation_level": "repeatable read"  
-        # }
-    # }
-# }
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "ATOMIC_REQUESTS": True,  # 强化事务一致性
+        "OPTIONS": {
+            "isolation_level": "repeatable read"  
+        }
     }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
